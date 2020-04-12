@@ -1,0 +1,22 @@
+ext {
+    moduleId = "google_pixel_4_xl_faker"
+    riruApiVersion = 4
+
+    moduleProp = [
+            name       : "Google Pixel 4 XL Faker",
+            version    : "v1.0",
+            versionCode: "1",
+            author     : "Acris Liu",
+            description: "Fake as Google Pixel 4 XL by hook system_property_get. Requires Riru - Core v19 or above installed.",
+            api        : riruApiVersion
+    ]
+
+    magiskModuleProp = [
+            id         : "riru-${moduleId.replace('_', '-')}",
+            name       : "Riru - ${moduleProp['name']}",
+            version    : moduleProp['version'],
+            versionCode: moduleProp['versionCode'],
+            author     : moduleProp['author'],
+            description: moduleProp['description']
+    ]
+}
