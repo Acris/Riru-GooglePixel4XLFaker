@@ -32,10 +32,10 @@
 #include <sys/stat.h>
 #include <sys/types.h>
 #include <sys/syscall.h>
-#include "xh_errno.h"
-#include "xh_log.h"
-#include "xh_util.h"
-#include "xh_elf.h"
+#include "include/xh_errno.h"
+#include "include/xh_log.h"
+#include "include/xh_util.h"
+#include "include/xh_elf.h"
 
 #define XH_ELF_DEBUG 0
 

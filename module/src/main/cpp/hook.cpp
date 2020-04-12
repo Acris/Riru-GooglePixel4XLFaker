@@ -14,7 +14,7 @@
 #include <string>
 #include <sys/system_properties.h>
 
-#include "external/libxhook/xhook.h"
+#include "external/libxhook/include/xhook.h"
 #include "include/riru.h"
 #include "include/logging.h"
 
