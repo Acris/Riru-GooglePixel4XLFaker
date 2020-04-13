@@ -10,8 +10,8 @@ Requires Riru - Core v19 or above installed.
 
 By default, `__system_property_get` (`android::base::GetProperty` on Pie+) will be hooked in packages except `com.oneplus.camera` and `com.oneplus.gallery` with value map below	
 
-* `ro.product.manufacturer` -> `Google`
-* `ro.product.brand` -> `google`
-* `ro.product.model` -> `Pixel 4 XL`
-* `ro.product.name` -> `coral`
-* `ro.product.device` -> `coral`
+* `ro.product.vendor.manufacturer` -> `Google`
+* `ro.product.vendor.brand` -> `google`
+* `ro.product.vendor.model` -> `Pixel 4 XL`
+* `ro.product.vendor.name` -> `coral`
+* `ro.product.vendor.device` -> `coral`
