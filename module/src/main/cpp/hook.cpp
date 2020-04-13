@@ -37,19 +37,34 @@
 NEW_FUNC_DEF(int, __system_property_get, const char *key, char *value) {
     int res = old___system_property_get(key, value);
     if (key) {
-        if (strcmp("ro.product.manufacturer", key) == 0) {
-            strcpy(value, "Google");
-            LOGI("system_property_get: %s -> %s", key, value);
-        } else if (strcmp("ro.product.brand", key) == 0) {
+        if (strcmp("ro.product.system.brand", key) == 0) {
             strcpy(value, "google");
             LOGI("system_property_get: %s -> %s", key, value);
-        } else if (strcmp("ro.product.model", key) == 0) {
-            strcpy(value, "Pixel 4 XL");
+        } else if (strcmp("ro.product.system.device", key) == 0) {
+            strcpy(value, "generic");
             LOGI("system_property_get: %s -> %s", key, value);
-        } else if (strcmp("ro.product.name", key) == 0) {
+        } else if (strcmp("ro.product.system.manufacturer", key) == 0) {
+            strcpy(value, "Google");
+            LOGI("system_property_get: %s -> %s", key, value);
+        } else if (strcmp("ro.product.system.model", key) == 0) {
+            strcpy(value, "mainline");
+            LOGI("system_property_get: %s -> %s", key, value);
+        } else if (strcmp("ro.product.system.name", key) == 0) {
+            strcpy(value, "mainline");
+            LOGI("system_property_get: %s -> %s", key, value);
+        } else if (strcmp("ro.product.vendor.brand", key) == 0) {
+            strcpy(value, "google");
+            LOGI("system_property_get: %s -> %s", key, value);
+        } else if (strcmp("ro.product.vendor.device", key) == 0) {
             strcpy(value, "coral");
             LOGI("system_property_get: %s -> %s", key, value);
-        } else if (strcmp("ro.product.device", key) == 0) {
+        } else if (strcmp("ro.product.vendor.manufacturer", key) == 0) {
+            strcpy(value, "Google");
+            LOGI("system_property_get: %s -> %s", key, value);
+        } else if (strcmp("ro.product.vendor.model", key) == 0) {
+            strcpy(value, "Pixel 4 XL");
+            LOGI("system_property_get: %s -> %s", key, value);
+        } else if (strcmp("ro.product.vendor.name", key) == 0) {
             strcpy(value, "coral");
             LOGI("system_property_get: %s -> %s", key, value);
         }
@@ -59,19 +74,34 @@ NEW_FUNC_DEF(int, __system_property_get, const char *key, char *value) {
 
 NEW_FUNC_DEF(std::string, _ZN7android4base11GetPropertyERKNSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEES9_, const std::string &key, const std::string &default_value) {
     std::string res = old__ZN7android4base11GetPropertyERKNSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEES9_(key, default_value);
-    if (strcmp("ro.product.manufacturer", key.c_str()) == 0) {
-        res = "Google";
-        LOGI("android::base::GetProperty: %s -> %s", key.c_str(), res.c_str());
-    } else if (strcmp("ro.product.brand", key.c_str()) == 0) {
+    if (strcmp("ro.product.system.brand", key.c_str()) == 0) {
         res = "google";
         LOGI("android::base::GetProperty: %s -> %s", key.c_str(), res.c_str());
-    } else if (strcmp("ro.product.model", key.c_str()) == 0) {
-        res = "Pixel 4 XL";
+    } else if (strcmp("ro.product.system.device", key.c_str()) == 0) {
+        res = "generic";
         LOGI("android::base::GetProperty: %s -> %s", key.c_str(), res.c_str());
-    } else if (strcmp("ro.product.name", key.c_str()) == 0) {
+    } else if (strcmp("ro.product.system.manufacturer", key.c_str()) == 0) {
+        res = "Google";
+        LOGI("android::base::GetProperty: %s -> %s", key.c_str(), res.c_str());
+    } else if (strcmp("ro.product.system.model", key.c_str()) == 0) {
+        res = "mainline";
+        LOGI("android::base::GetProperty: %s -> %s", key.c_str(), res.c_str());
+    } else if (strcmp("ro.product.system.name", key.c_str()) == 0) {
+        res = "mainline";
+        LOGI("android::base::GetProperty: %s -> %s", key.c_str(), res.c_str());
+    } else if (strcmp("ro.product.vendor.brand", key.c_str()) == 0) {
+        res = "google";
+        LOGI("android::base::GetProperty: %s -> %s", key.c_str(), res.c_str());
+    } else if (strcmp("ro.product.vendor.device", key.c_str()) == 0) {
         res = "coral";
         LOGI("android::base::GetProperty: %s -> %s", key.c_str(), res.c_str());
-    } else if (strcmp("ro.product.name", key.c_str()) == 0) {
+    } else if (strcmp("ro.product.vendor.manufacturer", key.c_str()) == 0) {
+        res = "Google";
+        LOGI("android::base::GetProperty: %s -> %s", key.c_str(), res.c_str());
+    } else if (strcmp("ro.product.vendor.model", key.c_str()) == 0) {
+        res = "Pixel 4 XL";
+        LOGI("android::base::GetProperty: %s -> %s", key.c_str(), res.c_str());
+    } else if (strcmp("ro.product.vendor.name", key.c_str()) == 0) {
         res = "coral";
         LOGI("android::base::GetProperty: %s -> %s", key.c_str(), res.c_str());
     }
